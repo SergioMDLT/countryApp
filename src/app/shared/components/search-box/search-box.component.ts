@@ -9,7 +9,7 @@ import { debounceTime, Subject, Subscription } from 'rxjs';
 })
 export class SearchBoxComponent implements OnInit, OnDestroy {
 
-  private debouncer: Subject<string> = new Subject<string>();
+  private readonly debouncer: Subject<string> = new Subject<string>();
   private debouncerSubscription?: Subscription;
 
   @Input()
